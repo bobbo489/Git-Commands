@@ -69,3 +69,39 @@ _A list of my commonly used Git commands_
 | `git log --summary` | View changes (detailed) |
 | `git diff [source branch] [target branch]` | Preview changes before merging |
 
+
+### Process to work with git and open source
+
+* Fork the repo (click the fork button on the repo you want to help with)
+* Clone your forked repo (on the repo https://github.com/bobbo489/<repo_name>), (click the clone/download and copy the url, it should end in .git) 
+  * git clone https://github.com/bobbo489/<repo_name>.git
+* Create a new branch 
+  * cd repo
+  * git branch <new-informative-branch-name>
+  * git checkout <new-informative-branch-name>
+    * If needing to go back to master = git checkout master
+* Make edits and changes as needed to files in the local repo
+* Add and commit those changes
+  * git add <files you changed>
+  * git commit -m "<short message here>" or git commit <-- opens up your text editor where you can add more and longer info
+* Verify what will be committed
+  * git status
+* Push your changes to the current branch of the forked repo
+  * git push --set-upstream origin <new-informative-branch-name>
+* Update your local repo in case other updates have happened!
+  * Check the remotes
+    * git remote -v (should list your repos and actions you can do to them)
+    * May need to add the original repo (probably a good thing if you want to actually do things)
+      * git remote add <some shortname, like upstream> https://github.com/original-owner-username/original-repository.git
+  * Check the remotes again to make sure your addition worked
+    * git remote -v
+* Sync the Fork to ensure everything is up to date
+  * git fetch <the shortname you selected above>
+* Switch to master branch and merge
+  * git checkout master
+  * git merge <shortname you selected above>/master
+* Create the Pull Request to incorporate your code!
+  * On your forked repo, select New Pull Request
+    * Add/modify the title and comments as needed, then click Create Pull Request
+  * If the maintainers of the original repo like your stuff, they can accept it, if not they can decline it, or have you modify your code prior to accepting the request.
+* Any things that need a refresher....look at this good guide.  https://www.digitalocean.com/community/tutorials/how-to-create-a-pull-request-on-github
