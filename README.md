@@ -77,13 +77,13 @@ _A list of my commonly used Git commands_
   * git clone https://github.com/bobbo489/<repo_name>.git
 * Create a new branch 
   * cd repo
-  * git branch <new-informative-branch-name>
-  * git checkout <new-informative-branch-name>
+  * git branch "new-informative-branch-name"
+  * git checkout "new-informative-branch-name"
     * If needing to go back to master = git checkout master
 * Make edits and changes as needed to files in the local repo
 * Add and commit those changes
   * git add <files you changed>
-  * git commit -m "<short message here>" or git commit <-- opens up your text editor where you can add more and longer info
+  * git commit -m "short message here" or git commit <-- opens up your text editor where you can add more and longer info
 * Verify what will be committed
   * git status
 * Push your changes to the current branch of the forked repo
